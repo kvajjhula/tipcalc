@@ -27,13 +27,13 @@ class MainActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 val amount = s?.toString()?.trim()
                 tipButton.isEnabled = amount?.isNotEmpty() == true
-                if (amount?.isNotEmpty() == true) {
-                    val formattedAmount = NumberFormat.getCurrencyInstance(Locale.US).format(amount.toDoubleOrNull() ?: 0.0)
-                    serviceChargeEditText.removeTextChangedListener(this)
-                    serviceChargeEditText.setText(formattedAmount)
-                    serviceChargeEditText.setSelection(formattedAmount.length)
-                    serviceChargeEditText.addTextChangedListener(this)
-                }
+//                if (amount?.isNotEmpty() == true) {
+//                    val formattedAmount = NumberFormat.getCurrencyInstance(Locale.US).format(amount.toDoubleOrNull() ?: 0.0)
+//                    serviceChargeEditText.removeTextChangedListener(this)
+//                    serviceChargeEditText.setText(formattedAmount)
+//                    serviceChargeEditText.setSelection(formattedAmount.length)
+//                    serviceChargeEditText.addTextChangedListener(this)
+//                }
             }
         })
 
